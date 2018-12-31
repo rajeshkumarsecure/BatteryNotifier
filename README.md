@@ -6,7 +6,7 @@
 
 **Python Version:** Python 3.6
 
-**Requirement**:
+**Requirements**:
 
 ```shell
 sudo apt-get install python3-tk

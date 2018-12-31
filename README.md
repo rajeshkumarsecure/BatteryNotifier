@@ -6,7 +6,7 @@
 
 **Python Version:** Python 3.6
 
-**Requirements**:
+**Requirements:**
 
 ```shell
 sudo apt-get install python3-tk
@@ -32,7 +32,7 @@ sudo pip3 install -r requirements.txt
 **Notes:**  
 
 1. The Program has been tested on Ubuntu 18.04, Linux Mint 19.
-2. The Program should also work on all Python3 Version.
+2. The Program should also work on all Python3 Versions.
 
 **Future Scope:**  
 

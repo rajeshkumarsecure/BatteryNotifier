@@ -47,12 +47,15 @@ class BatteryNotifier:
     def is_power_plugged(self):
         try:
             return self.battery.power_plugged
-        except AttributeError:
-            print("Kindly Retry again...")
-    
+        except AttributeError:            
+            return None
+                
     def get_battery_percentage(self):
-        return self.battery.percent
-
+        try:
+            return self.battery.percent
+        except AttributeError:            
+            return None
+            
     def set_low_battery_flag(self):
         if not self.low_battery_flag:
             self.low_battery_flag = True
@@ -71,11 +74,14 @@ class BatteryNotifier:
         self.__low_value = value
 
     def low_battery_notification(self):
-        if not self.is_power_plugged() and self.get_battery_percentage() <= self.low_value:
-            try:
-                playsound(self.alarm_file)
-            except PlaysoundException:
-                print("Exception occurred while playing %s" % self.alarm_file)
+        try:
+            if not self.is_power_plugged() and self.get_battery_percentage() <= self.low_value:
+                try:
+                    playsound(self.alarm_file)
+                except PlaysoundException:
+                    print("Exception occurred while playing %s" % self.alarm_file)
+        except TypeError:
+            pass
 
     def set_full_charge_flag(self):
         if not self.full_charge_flag:
@@ -91,11 +97,14 @@ class BatteryNotifier:
         return self.__full_value
 
     def full_charge_notification(self):
-        if self.is_power_plugged() and self.get_battery_percentage() >= self.full_value:
-            try:
-                playsound(self.alarm_file)
-            except PlaysoundException:
-                print("Exception occurred while playing %s" % self.alarm_file)
+        try:
+            if self.is_power_plugged() and self.get_battery_percentage() >= self.full_value:
+                try:
+                    playsound(self.alarm_file)
+                except PlaysoundException:
+                    print("Exception occurred while playing %s" % self.alarm_file)
+        except TypeError:
+            pass
 
     def change_alarm_file(self, new_file_path):
         if os.path.exists(new_file_path):

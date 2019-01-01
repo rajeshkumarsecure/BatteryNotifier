@@ -17,7 +17,7 @@ from tkinter import *
 from tkinter import filedialog
 from time import sleep
 
-from batterynotifier.battery_notifier import BatteryNotifier
+from BatteryNotifier.battery_notifier import BatteryNotifier
 
 
 def browse_func(battery_notifier_obj):    
@@ -45,8 +45,9 @@ class TkinterGuiBatteryNotifier:
     def create_elements_in_the_windows(self):
         self.battery_notifier_obj = BatteryNotifier()
         battery_perc = self.battery_notifier_obj.get_battery_percentage()
+        
         battery_charge_status = self.battery_notifier_obj.is_power_plugged() 
-
+                
         # Window title
         self.root.title('Battery Charge Notifier')
 
@@ -73,8 +74,9 @@ class TkinterGuiBatteryNotifier:
                 
         self.battery_notifier_obj = BatteryNotifier()
         battery_perc = self.battery_notifier_obj.get_battery_percentage()
+                
         battery_charge_status = self.battery_notifier_obj.is_power_plugged()
-
+        
         self.batt_value["text"] = str(battery_perc)
         self.charge_status["text"] = str(battery_charge_status)
 
@@ -89,11 +91,11 @@ class TkinterGuiBatteryNotifier:
                     self.process2 = Process(target=self.battery_notifier_obj.full_charge_notification)
                     self.process2.start()
                     # battery_notifier_obj.full_charge_notification()
-            self.root.after(1000, self.monitor_battery)
+            self.root.after(500, self.monitor_battery)
         else:
             self.first_run = False
             # After 1 second, update the status
-            self.root.after(1000, self.monitor_battery)
+            self.root.after(500, self.monitor_battery)
 
     def mainloop_routine(self):
         # Launch the monitor battery program after 1 millisecond (when the window is loaded)

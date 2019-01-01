@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 
-# Version - 1.0
+# Version - 0.1
 # Date - 31/Dec/2018
 # This Program provides GUI for Battery Notifier.
 # It provide options for Modifying settings.
+# Version - 0.2
+# Date - 1/Jan/2019
+# Fixed minor bugs.
 
 __Author__ = "Rajesh Kumar N"
-__version__ = "0.1"
+__version__ = "0.2"
 
 import sys
 sys.path.append('../')
@@ -47,7 +50,7 @@ class TkinterGuiBatteryNotifier:
         battery_perc = self.battery_notifier_obj.get_battery_percentage()
         
         battery_charge_status = self.battery_notifier_obj.is_power_plugged() 
-                
+
         # Window title
         self.root.title('Battery Charge Notifier')
 

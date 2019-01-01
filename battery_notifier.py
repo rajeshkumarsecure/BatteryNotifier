@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 
-# Version - 1.0
+# Version - 0.1
 # Date - 31/Dec/2018
 # This Program works with Battery Sensors and gets the Battery charge details.
 # It also plays alarm to notify low or full battery.
 
 # Sample file downloaded from the below link:
 # http://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3
+# Version - 0.2
+# Date - 1/Jan/2019
+# Fixed minor bugs.
 
 __Author__ = "Rajesh Kumar N"
-__version__ = "0.1"
+__version__ = "0.2"
 
 import json
 from playsound import playsound, PlaysoundException

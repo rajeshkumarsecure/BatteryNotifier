@@ -2,11 +2,13 @@
 
 **Description:** This Program monitors the Laptop Battery Percentage and notifies for Low Battery or Full Battery Charge with an alarm sound.
 
-**Supported OS:** Ubuntu/Linux Mint
+**Supported OS:** Ubuntu/Linux Mint/Windows 10
 
 **Python Version:** Python 3.6
 
 **Requirements:**
+
+*Linux:*
 
 ```shell
 sudo apt-get install python3-tk
@@ -16,6 +18,11 @@ Other required python packages are listed on requirements.txt
 
 ```shell
 sudo pip3 install -r requirements.txt
+```
+*Windows:*
+
+```shell
+pip install -r requirements.txt
 ```
 
 **GUI Contents:**
@@ -31,10 +38,9 @@ sudo pip3 install -r requirements.txt
 
 **Notes:**  
 
-1. The Program has been tested on Ubuntu 18.04, Linux Mint 19.
+1. The Program has been tested on Ubuntu 18.04, Linux Mint 19 and Windows 10.
 2. The Program should also work on all Python3 Versions.
 
 **Future Scope:**  
 
 1. Adding support for multiple Batteries in a Laptop.
-2. Adding support for Windows OS.

@@ -25,6 +25,11 @@ sudo pip3 install -r requirements.txt
 pip install -r requirements.txt
 ```
 
+**To Run the Program:**
+```shell
+python3 tkinter_battery_notifier.py
+```
+
 **GUI Contents:**
 
 1. Battery Percentage
@@ -39,8 +44,5 @@ pip install -r requirements.txt
 **Notes:**  
 
 1. The Program has been tested on Ubuntu 18.04, Linux Mint 19 and Windows 10.
-2. The Program should also work on all Python3 Versions.
-
-**Future Scope:**  
-
-1. Adding support for multiple Batteries in a Laptop.
+2. The Program also works on the laptop with multiple batteries. The Charge of multiple batteries are combined together for processing.
+3. The Program should also work on all Python3 Versions.

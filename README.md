@@ -26,8 +26,16 @@ pip install -r requirements.txt
 ```
 
 **To Run the Program:**
+
+*Linux:*
+
 ```shell
 python3 tkinter_battery_notifier.py
+```
+*Windows:*
+
+```shell
+python tkinter_battery_notifier.py
 ```
 
 **GUI Contents:**

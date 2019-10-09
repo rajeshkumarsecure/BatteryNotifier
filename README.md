@@ -44,5 +44,5 @@ python3 tkinter_battery_notifier.py
 **Notes:**  
 
 1. The Program has been tested on Ubuntu 18.04, Linux Mint 19 and Windows 10.
-2. The Program also works on the laptop with multiple batteries. The Charge of multiple batteries are combined together for processing.
+2. The Program also works on the laptop with multiple batteries. The charge of multiple batteries are combined together for processing.
 3. The Program should also work on all Python3 Versions.
